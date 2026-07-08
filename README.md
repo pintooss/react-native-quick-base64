@@ -24,6 +24,14 @@ Try the benchmarks in the [example](./example) app.
 npm install react-native-quick-base64
 ```
 
+> [!IMPORTANT]
+> **Requires the New Architecture.** Version `3.0.0`+ is a pure C++ TurboModule and only registers when the app runs with React Native's New Architecture enabled:
+>
+> - Bare React Native: `newArchEnabled=true` (default on RN 0.76+; forced on 0.85+).
+> - Expo: SDK 54+ (New Architecture is default), or SDK 53 with New Architecture explicitly enabled.
+>
+> On the Old Architecture you'll get `TurboModuleRegistry.getEnforcing(...): 'QuickBase64' could not be found`. Enable the New Architecture and rebuild (`cd android && ./gradlew clean`), or pin `react-native-quick-base64@2.2.2` to stay on the Old Architecture.
+
 ---
 
 This module installs its native bindings automatically.
